@@ -30,10 +30,10 @@
    * Jsonnet: [![Jsonnet](https://github.com/netology-code/sysadm-homeworks/raw/devsys10/01-intro-01/img/jsonnet.png)](https://github.com/netology-code/sysadm-homeworks/blob/devsys10/01-intro-01/img/jsonnet.png)
      **SOLUTION - DONE.**
 5. Добавьте свое имя в каждый файл, сделайте снимок экран и загрузите его на любой сервис обмена картинками.
-   * Terraform: [![Терраформ](https://github.com/netology-code/sysadm-homeworks/raw/devsys10/01-intro-01/img/terraform.png)](https://github.com/netology-code/sysadm-homeworks/blob/devsys10/01-intro-01/img/terraform.png)
-   * Bash: [![bahs](https://github.com/netology-code/sysadm-homeworks/raw/devsys10/01-intro-01/img/bash.png)](https://github.com/netology-code/sysadm-homeworks/blob/devsys10/01-intro-01/img/bash.png)
-   * Markdown: [![markdown](https://github.com/netology-code/sysadm-homeworks/raw/devsys10/01-intro-01/img/markdown.png)](https://github.com/netology-code/sysadm-homeworks/blob/devsys10/01-intro-01/img/markdown.png)
-   * Yaml: [![Yaml](https://github.com/netology-code/sysadm-homeworks/raw/devsys10/01-intro-01/img/yaml.png)](https://github.com/netology-code/sysadm-homeworks/blob/devsys10/01-intro-01/img/yaml.png)
+   * Terraform: [![Терраформ](https://github.com/olegnizamov/devops-netology/blob/master/lesson1/files/1.PNG)](https://github.com/olegnizamov/devops-netology/blob/master/lesson1/files/1.PNG)
+   * Bash: [![bahs](https://github.com/olegnizamov/devops-netology/blob/master/lesson1/files/3.PNG)](https://github.com/olegnizamov/devops-netology/blob/master/lesson1/files/3.PNG)
+   * Markdown: [![markdown](https://github.com/olegnizamov/devops-netology/blob/master/lesson1/files/4.PNG)](https://github.com/olegnizamov/devops-netology/blob/master/lesson1/files/4.PNG)
+   * Yaml: [![Yaml](https://github.com/olegnizamov/devops-netology/blob/master/lesson1/files/2.PNG)](https://github.com/olegnizamov/devops-netology/blob/master/lesson1/files/2.PNG)
    * Jsonnet: [![Jsonnet](https://github.com/netology-code/sysadm-homeworks/raw/devsys10/01-intro-01/img/jsonnet.png)](https://github.com/netology-code/sysadm-homeworks/blob/devsys10/01-intro-01/img/jsonnet.png)
 
 6. Ссылки на картинки укажите в личном кабинете как решение домашнего задания.
