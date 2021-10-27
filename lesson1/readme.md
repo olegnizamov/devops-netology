@@ -30,13 +30,15 @@
    * Jsonnet: [![Jsonnet](https://github.com/netology-code/sysadm-homeworks/raw/devsys10/01-intro-01/img/jsonnet.png)](https://github.com/netology-code/sysadm-homeworks/blob/devsys10/01-intro-01/img/jsonnet.png)
      **SOLUTION - DONE.**
 5. Добавьте свое имя в каждый файл, сделайте снимок экран и загрузите его на любой сервис обмена картинками.
+
    * Terraform: [![Терраформ](https://github.com/olegnizamov/devops-netology/blob/master/lesson1/files/1.PNG)](https://github.com/olegnizamov/devops-netology/blob/master/lesson1/files/1.PNG)
    * Bash: [![bahs](https://github.com/olegnizamov/devops-netology/blob/master/lesson1/files/3.PNG)](https://github.com/olegnizamov/devops-netology/blob/master/lesson1/files/3.PNG)
    * Markdown: [![markdown](https://github.com/olegnizamov/devops-netology/blob/master/lesson1/files/4.PNG)](https://github.com/olegnizamov/devops-netology/blob/master/lesson1/files/4.PNG)
    * Yaml: [![Yaml](https://github.com/olegnizamov/devops-netology/blob/master/lesson1/files/2.PNG)](https://github.com/olegnizamov/devops-netology/blob/master/lesson1/files/2.PNG)
-   * Jsonnet: [![Jsonnet](https://github.com/netology-code/sysadm-homeworks/raw/devsys10/01-intro-01/img/jsonnet.png)](https://github.com/netology-code/sysadm-homeworks/blob/devsys10/01-intro-01/img/jsonnet.png)
-
+   * Jsonnet: [![Jsonnet](https://github.com/olegnizamov/devops-netology/blob/master/lesson1/files/5.PNG)](https://github.com/olegnizamov/devops-netology/blob/master/lesson1/files/5.PNG)
+     **SOLUTION - DONE.**
 6. Ссылки на картинки укажите в личном кабинете как решение домашнего задания.
+   **SOLUTION - DONE.**
 
 ## Задание №2 - Описание жизненного цикла задачи (разработки нового функционала)
 
@@ -49,3 +51,40 @@
 ### Решение задачи
 
 Вам необходимо описать процесс решения задачи в соответствии с жизненным циклом разработки программного обеспечения. Использование какого-либо конкретного метода разработки не обязательно. Для решения главное - прописать по пунктам шаги решения задачи (релизации в конечный результат) с участием менеджера, разработчика (или команды разработчиков), тестировщика (или команды тестировщиков) и себя как DevOps-инженера.
+
+### **Описание решения**
+
+Менеджер-ПродуктОунер и т.д:
+
+1) Получения задачи от бизнеса.
+2) Общение с тимлидом на счет эстимации задачи(времени выполнения).Менеджер-ПродуктОунер и т.д:
+
+Тимлид:
+
+3. Описание задачи.
+4. Постановка задачи разработчику.
+5. Получения дизайн-ревью задачи, оценка его
+6. Создание фичи ветки в git для реализации данной задачи
+7. После уточнения всех вопросов - задача переводится в разработку.
+
+Разработчик:
+
+8. Переключение на фича-ветку
+9. Выполнение задачи.
+10. Написание тестов на задачу.
+11. Прохождения статического анализатора кода и код-стайла (к примеру gitlab.ci)
+12. В случае успешного прохождения предкоммитных действий - пуш в фича ветку
+13. Запуск автотестов на проверку корректности фичи в системе. (автоматически)
+14. В случае успешного выполнения тестов - перевод на тестировщика и в тест. В случае неуспеха - доработка фичи.
+
+Тестировщик:
+
+15. Создание площадки для тестирования фичи (автоматически).
+16. Выполнение тестирование фичи.
+17. В случае успеха - апрув фичи.
+
+18 Деплой задачи на бой (автоматически).
+
+Devops
+
+Цель devops - обновление площадок(версия php, mysql) , настройка автоматизации настройки и разворачивания систем, настройка систем мониторинга продукта.
