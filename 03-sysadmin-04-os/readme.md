@@ -204,9 +204,11 @@ sysctl -a | grep fs.nr_open fs.nr_open = 1048576 Максимально ВОЗМ
    неймспейсе процессов; покажите, что ваш процесс работает под PID 1 через `nsenter`. Для простоты работайте в данном
    задании под root (`sudo -i`). Под обычным пользователем требуются дополнительные опции (`--map-root-user`) и т.д.
 > Ответ:
+```bash
 Сессия 1:
 vagrant@vagrant:~$ sudo -i
 root@vagrant:~# unshare -f --pid --mount-proc /bin/sleep 1h
+
 Сессия 2:
 vagrant@vagrant:~$ sudo -i
 root@vagrant:~# ps a | grep /bin/sleep
@@ -219,7 +221,7 @@ USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 root           1  0.0  0.0   8076   528 pts/0    S+   21:23   0:00 /bin/sleep 1h
 root           2  0.0  0.1   9836  3968 pts/1    S    21:23   0:00 -bash
 root          11  0.0  0.1  11492  3452 pts/1    R+   21:23   0:00 ps aux
-
+```
 
 7. Найдите информацию о том, что такое `:(){ :|:& };:`. Запустите эту команду в своей виртуальной машине Vagrant с
    Ubuntu 20.04 ( **это важно, поведение в других ОС не проверялось** ). Некоторое время все будет "плохо", после чего (
