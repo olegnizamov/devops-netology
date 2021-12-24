@@ -56,9 +56,9 @@ Connection closed by foreign host.
 - 
 >Ответ
 Ответ 200 - картинка 
-![image](1.png)
+![image](https://raw.githubusercontent.com/olegnizamov/devops-netology/main/03-sysadmin-06-net/1.PNG)
 illo-about-right.png  - самая долгая обработка
-![image](2.png)
+![image](https://raw.githubusercontent.com/olegnizamov/devops-netology/main/03-sysadmin-06-net/2.PNG)
 
 
 3. Какой IP адрес у вас в интернете?
