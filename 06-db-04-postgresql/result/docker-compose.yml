@@ -1,0 +1,19 @@
+version: "3.1"
+
+services:
+
+  db:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: mypassword
+    volumes:
+      - ./dbvolume:/var/lib/postgresql/data
+      - ./backupvolume:/backup
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
