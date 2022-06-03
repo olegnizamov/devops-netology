@@ -7,7 +7,7 @@
 - первоначальном конфигурировании elastcisearch
 - запуске elasticsearch в docker
 
-Используя докер образ [centos:7](https://hub.docker.com/_/centos) как базовый и 
+Используя докер образ [centos:7](https://hub.docker.com/_/centos) как базовый и
 [документацию по установке и запуску Elastcisearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/targz.html):
 
 - составьте Dockerfile-манифест для elasticsearch
@@ -38,7 +38,7 @@
 - изучать состояние кластера
 - обосновывать причину деградации доступности данных
 
-Ознакомтесь с [документацией](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-create-index.html) 
+Ознакомтесь с [документацией](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-create-index.html)
 и добавьте в `elasticsearch` 3 индекса, в соответствии со таблицей:
 
 | Имя | Количество реплик | Количество шард |
@@ -68,14 +68,14 @@
 
 Создайте директорию `{путь до корневой директории с elasticsearch в образе}/snapshots`.
 
-Используя API [зарегистрируйте](https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshots-register-repository.html#snapshots-register-repository) 
+Используя API [зарегистрируйте](https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshots-register-repository.html#snapshots-register-repository)
 данную директорию как `snapshot repository` c именем `netology_backup`.
 
 **Приведите в ответе** запрос API и результат вызова API для создания репозитория.
 
 Создайте индекс `test` с 0 реплик и 1 шардом и **приведите в ответе** список индексов.
 
-[Создайте `snapshot`](https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshots-take-snapshot.html) 
+[Создайте `snapshot`](https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshots-take-snapshot.html)
 состояния кластера `elasticsearch`.
 
 **Приведите в ответе** список файлов в директории со `snapshot`ами.
@@ -83,7 +83,7 @@
 Удалите индекс `test` и создайте индекс `test-2`. **Приведите в ответе** список индексов.
 
 [Восстановите](https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshots-restore-snapshot.html) состояние
-кластера `elasticsearch` из `snapshot`, созданного ранее. 
+кластера `elasticsearch` из `snapshot`, созданного ранее.
 
 **Приведите в ответе** запрос к API восстановления и итоговый список индексов.
 
