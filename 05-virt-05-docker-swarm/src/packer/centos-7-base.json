@@ -2,14 +2,14 @@
   "builders": [
     {
       "disk_type": "network-nvme",
-      "folder_id": "",
+      "folder_id": "b1gvcj5c7qi25j81c8ob",
       "image_description": "by packer",
       "image_family": "centos",
       "image_name": "centos-7-base",
       "source_image_family": "centos-7",
       "ssh_username": "centos",
-      "subnet_id": "",
-      "token": "",
+      "subnet_id": "e9b1c24l55u50jis5ujq",
+      "token": "AQAAAAAK95aFAATuwVVwsVDzcENouB59H-1n21E",
       "type": "yandex",
       "use_ipv4_nat": true,
       "zone": "ru-central1-a"
