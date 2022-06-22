@@ -1,42 +1,29 @@
-# С какого линукса дерём основной образ
 FROM centos:7
 
-# создаём группу/юзера elasticsearch:elasticsearch,
-# Устанавливаем wget
-# Создаём папки в /opt/ext_volume для подключаемого тома (там будут данные и логи)
-# Устанавливаем Elasticsearch в /opt,
-# Задаём владельца elasticsearch:elasticsearch для подпапок в /opt
+RUN yum update -y && \
+      yum install wget -y && \
+      yum install perl-Digest-SHA -y && \
+      yum install java-1.8.0-openjdk.x86_64 -y
 
-RUN groupadd elasticsearch \
-    && useradd -s /sbin/nologin -c "elasticsearch" -g elasticsearch elasticsearch \
-    && yum -y install wget \
-    && yum clean all \
-    && mkdir -p /opt/ext_volume/logs \
-    && mkdir -p /opt/ext_volume/data \
-    && cd /opt \
-    && wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.0.0-linux-x86_64.tar.gz \
-    && tar -xzf elasticsearch-8.0.0-linux-x86_64.tar.gz \
-    && rm -f /opt/*.tar.gz \
-    && chown -R elasticsearch:elasticsearch /opt/*
+WORKDIR /usr/elastic/
 
-# Задаем каталог, который будет жить во внешнем томе
-VOLUME /opt/ext_volume
+RUN wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.13.3-linux-x86_64.tar.gz && \
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.13.3-linux-x86_64.tar.gz.sha512
 
-# Копируем конфиги с настройками Elasticsearch
-COPY --chown=elasticsearch:elasticsearch ./MyEScfg /opt/elasticsearch-8.0.0/config
+RUN shasum -a 512 -c elasticsearch-7.13.3-linux-x86_64.tar.gz.sha512 && \
+tar -xzf elasticsearch-7.13.3-linux-x86_64.tar.gz
 
-# ES использует порты 9200 для http(s) и 9300 для продвинутых клиентов
+RUN groupadd -g 3000 elasticsearch && \
+    adduser -u 3000 -g elasticsearch -s /bin/sh elasticsearch && \
+    chmod 777 -R /var/lib/ && \
+    mkdir /var/lib/snapshots &&\
+    chmod 777 -R /var/lib/snapshots && \
+    chmod 777 -R /usr/elastic/elasticsearch-7.13.3/
+
+USER 3000
 EXPOSE 9200
 EXPOSE 9300
 
-# Переключаемся на юзера elasticsearch (с root`ом ES не работает)
-USER elasticsearch:elasticsearch
+WORKDIR /usr/elastic/elasticsearch-7.13.3/bin/
 
-# Задаём переменные среды для ES
-ENV ES_USER=elasticsearch ES_GROUP=elasticsearch
-
-# Задаём рабочий каталог
-WORKDIR /opt/elasticsearch-8.0.0/bin
-
-# Запускаем Elasticsearch
-ENTRYPOINT ./elasticsearch
+CMD ["./elasticsearch", "-Enode.name=netology_test","-Epath.data=/var/lib/data","-Epath.repo=/var/lib/snapshots", "-Epath.logs=/var/lib/logs", "-Enetwork.host=0.0.0.0", "-Ediscovery.type=single-node"]
