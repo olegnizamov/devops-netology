@@ -31,7 +31,11 @@ https://docs.gitlab.com/ee/ci/variables/predefined_variables.html
 
 [.gitlab-ci](./repository/.gitlab-ci)
 ```
+![](9-5.1.png)
 
+![](9-5.2.png)
+
+![](9-5.3.png)
 
 ### Product Owner
 
