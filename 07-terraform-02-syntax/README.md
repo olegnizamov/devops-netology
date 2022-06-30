@@ -46,7 +46,7 @@ Packer
 Packer
 ```
 2. Ссылку на репозиторий с исходной конфигурацией терраформа.
-[terraform](/terraform)
+[terraform](/07-terraform-02-syntax/terraform)
 ---
 
 ```
